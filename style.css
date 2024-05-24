@@ -1,9 +1,16 @@
 .default-square {
     background-color: blue;
-    width: 100px;
-    height: 100px;
+    flex: 1;
+}
+
+.flex-container {
+    display: flex;
+    flex: 1;
 }
 
 #container {
     display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 1000px;
 }

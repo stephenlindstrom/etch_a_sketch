@@ -11,3 +11,5 @@ for (let i=0; i<GRID_SIZE; i++) {
         row.appendChild(div);
     }
 }
+
+

@@ -3,6 +3,10 @@
     flex: 1;
 }
 
+.filled-square {
+    background-color: black;
+}
+
 .flex-container {
     display: flex;
     flex: 1;

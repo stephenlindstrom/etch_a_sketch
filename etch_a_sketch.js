@@ -1,4 +1,4 @@
-const GRID_SIZE = 4;
+const GRID_SIZE = 100;
 const grid = document.querySelector("#container");
 
 for (let i=0; i<GRID_SIZE; i++) {
@@ -12,4 +12,10 @@ for (let i=0; i<GRID_SIZE; i++) {
     }
 }
 
+const squares = document.querySelectorAll(".default-square");
+squares.forEach((square) =>  {
+    square.addEventListener("mouseenter", () => {
+        square.classList.add("filled-square");
+    });
+});
 

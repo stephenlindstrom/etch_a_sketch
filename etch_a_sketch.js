@@ -30,3 +30,10 @@ squares.forEach((square) =>  {
     });
 });
 
+button = document.querySelector('button');
+button.addEventListener('click', () => {
+    squares.forEach((square) => {
+        square.classList.remove("filled-square");
+    });
+});
+

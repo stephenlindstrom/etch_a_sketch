@@ -12,10 +12,21 @@ for (let i=0; i<GRID_SIZE; i++) {
     }
 }
 
+let mouseIsDown;
+grid.addEventListener("mousedown", () => {
+    mouseIsDown = true;
+    console.log(mouseIsDown);
+});
+grid.addEventListener("mouseup", () => {
+    mouseIsDown = false;
+});
+
 const squares = document.querySelectorAll(".default-square");
 squares.forEach((square) =>  {
     square.addEventListener("mouseenter", () => {
-        square.classList.add("filled-square");
+        if (mouseIsDown){
+            square.classList.add("filled-square");
+        };
     });
 });
 

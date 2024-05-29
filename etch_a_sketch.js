@@ -27,12 +27,17 @@ button.addEventListener('click', () => {
 
     const squares = document.querySelectorAll(".default-square"); 
     squares.forEach((square) =>  {
+        let opacityPercentage = 0;
         square.addEventListener("mouseenter", () => {
             if (mouseIsDown){
+                if (opacityPercentage < 100) {
+                    opacityPercentage += 10;
+                }
+                const opacity = opacityPercentage/100;
                 const redValue = Math.floor(Math.random()*256);
                 const greenValue = Math.floor(Math.random()*256);
                 const blueValue = Math.floor(Math.random()*256);  
-                square.style.backgroundColor = `rgb(${redValue} ${greenValue} ${blueValue})`;
+                square.style.backgroundColor = `rgba(${redValue},${greenValue},${blueValue},${opacity})`;
             };
         });
     });
